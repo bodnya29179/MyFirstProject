@@ -12,14 +12,14 @@ burgerMenuButton.addEventListener('click', function () {
         openMenuIcon.style.display = 'none';
 
         document.getElementsByTagName('body')[0].style.overflow = 'hidden';
-        menu.className += ' header__menu-items-mobile';
+        menu.className = 'header__menu-items header__menu-items-mobile';
 
         closeMenuIcon.style.display = 'inline';
     } else {
         closeMenuIcon.style.display = 'none';
 
         document.getElementsByTagName('body')[0].style.overflow = 'auto';
-        menu.className += menu.className.split(' ')[0];
+        menu.className = 'header__menu-items';
 
         openMenuIcon.style.display = 'inline';
     }
