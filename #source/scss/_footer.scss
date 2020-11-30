@@ -1,0 +1,18 @@
+// add font size variables and line-height.
+// height or padding or margin is better.
+.footer {
+  display: flex;
+  padding: 22px 0;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-white;
+
+  color: $color-gray;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1px;
+}

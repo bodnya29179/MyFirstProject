@@ -1,0 +1,95 @@
+.blog {
+    background-color: $color-aqua;
+
+    &__entry {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    &__image {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    &__details {
+        width: 50%;
+        padding: 60px 15px;
+    }
+
+    &__header {
+        color: $color-gray;
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+
+        margin-bottom: 20px;
+    }
+
+    &__subheader {
+        color: $color-gray;
+        font-size: 17px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        line-height: 22px;
+
+        margin-bottom: 20px;
+    }
+
+    &__date {
+        margin-right: 40px;
+        display: inline-block;
+
+        &:before {
+            content: url("../img/icons/calendar.png");
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+    }
+
+    &__category {
+        display: inline-block;
+
+        &:before {
+            content: url("../img/icons/file.png");
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+    }
+
+    &__text {
+        color: $color-gray;
+
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.05em;
+    }
+
+    &__button {
+        width: 220px;
+        padding: 22px 15px;
+        margin: 105px 0 0;
+
+        @include btn($color-green, $color-white, $color-green);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .blog {
+        &__entry {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__image,
+        &__details {
+            width: 100%;
+            max-width: 390px;
+        }
+
+        &__entry:nth-child(3) &__details {
+            order: 1;
+        }
+    }
+}

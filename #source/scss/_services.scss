@@ -1,0 +1,37 @@
+.services {
+    background-color: $color-aqua;
+
+    &__card-item {
+        padding: 50px 37px;
+        margin: 15px;
+    }
+
+    &__card-image {
+        margin-left: 20px;
+    }
+
+    &__card-item:hover {
+        box-shadow: 0 15px 25px rgba($color-black, 0.35);
+        background-color: $color-green;
+    }
+
+    &__card-item:hover &__card-image {
+        filter: grayscale(1) invert(1);
+    }
+
+    &__card-item:hover &__card-title,
+    &__card-item:hover &__card-subtitle,
+    &__card-item:hover &__card-button {
+        color: $color-white;
+    }
+
+    &__card-item:hover &__card-button {
+        border-color: $color-white;
+
+        &:hover {
+            border-color: $color-white;
+            background-color: $color-white;
+            color: $color-green;
+        }
+    }
+}

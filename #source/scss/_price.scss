@@ -1,0 +1,100 @@
+.price {
+    background-color: $color-white-tungsten;
+
+    &__card-item {
+        position: relative;
+        overflow: hidden;
+
+        width: 100%;
+        padding: 50px 85px;
+        margin: 15px;
+
+        &:hover {
+            box-shadow: 0 15px 25px rgba($color-black, 0.35);
+        }
+    }
+
+    &__card-item:hover &__card-button {
+        color: $color-white;
+        background-color: $color-green;
+        border-color: $color-green;
+    }
+
+    &__card-header {
+        text-align: center;
+        margin-bottom: 80px;
+        z-index: 10;
+    }
+
+    &__header {
+        font-size: 25px;
+    }
+
+    &__subheader {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+
+    &__header,
+    &__subheader {
+        color: $color-white;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        line-height: 22px;
+    }
+
+    &__currency {
+        color: $color-white;
+        font-size: 25px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__background {
+        position: absolute;
+        transform: rotate(-6deg);
+        top: -25px;
+
+        width: 120%;
+        height: 32%;
+
+        background-color: $color-purple;
+    }
+
+    &__value {
+        color: $color-white;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        line-height: normal;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 37px 0;
+
+        width: 100%;
+    }
+
+    &__info-item {
+        color: $color-gray;
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        line-height: normal;
+
+        width: 100%;
+        padding-bottom: 14px;
+        border-bottom: 1px solid $color-gray-nickel;
+
+        &:not(:first-child) {
+            margin-top: 37px;
+        }
+    }
+
+    &__card-button {
+        padding: 16px 30px;
+    }
+}
